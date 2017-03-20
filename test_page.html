@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="it-IT" ng-app="sutterApp" ng-cloak>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sutter Academy Test</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- CUSTOM CSS -->
+    <style>
+
+        table tr:last-child th:first-child {
+            -moz-border-radius-topleft: 10px;
+            -webkit-border-top-left-radius:10px;
+            border-top-left-radius: 10px;
+        }
+        table tr:last-child th:last-child {
+            -moz-border-radius-topright: 10px;
+            -webkit-border-top-right-radius:10px;
+            border-top-right-radius: 10px;
+        }
+
+        table tr:last-child td:first-child {
+            -moz-border-radius-bottomleft: 10px;
+            -webkit-border-bottom-left-radius:10px;
+            border-bottom-left-radius: 10px;
+        }
+        
+        table tr:last-child td:last-child {
+            -moz-border-radius-bottomright: 10px;
+            -webkit-border-bottom-right-radius:10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        thead.custom_preventivo {
+            background-color: #00427f;
+            color: #fff;
+            font-size: 115%;
+        }
+        table{
+            border: none!important;
+        }
+        
+        tr {
+            border-bottom: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+        }
+
+        thead tr {
+            border: none!important;
+        }
+        
+        th.Descrizione {
+            text-align: left;
+        }
+        
+        th.Quantità {
+            text-align: right;
+        }
+        
+        th.Prezzo {
+            text-align: right;
+        }
+        
+        th.Prezzo_Mese {
+            text-align: right;
+        }
+        
+        tr.title {
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 110%;
+            background: #f1f1f1;
+            color: #00427f;
+        }
+        
+        tr.subtotal {
+            font-weight: bold;
+            font-size: 110%;
+            color: #444;
+        }
+        
+        tr.cost_total {
+            font-weight: bold;
+            font-size: 115%;
+            background-color: #999 !important;
+            color: #fff;
+        }
+        
+        td.Quantità,
+        td.Prezzo,
+        td.Prezzo_Mese {
+            text-align: right;
+        }
+        
+        tr.detail {
+            color: #666;
+            text-indent: 20px;
+        }
+        
+        tr.grandtotal {
+            background: #079181;
+            color: #fff;
+            font-size: 115%;
+            text-align: right;
+            font-weight: bold;
+            border: none!important;
+        }
+    </style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="css/modal.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="libs/ngBreadcrumbs/ngBreadCrumbs.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Preventivo dt</h2>
+        <p>Esempio tabella preventivo dt</p>
+        <table class="table table-bordered custom_preventivo">
+            <thead class="custom_preventivo">
+                <tr>
+                    <th class="Descrizione col-md-6">Descrizione</th>
+                    <th class="Quantità col-md-2">Quantità</th>
+                    <th class="Prezzo col-md-2">Prezzo</th>
+                    <th class="Prezzo_Mese col-md-2">Prezzo Mese</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="title">
+                    <td class="Descrizione">Manodopera</td>
+                    <td class="Quantità"></td>
+                    <td class="Prezzo"></td>
+                    <td class="Prezzo_Mese"></td>
+                </tr>
+                <tr class="detail">
+                    <td class="Descrizione">Operatore Base</td>
+                    <td class="Quantità">100 H</td>
+                    <td class="Prezzo">12,00 €</td>
+                    <td class="Prezzo_Mese">1,00 €</td>
+                </tr>
+                <tr class="subtotal">
+                    <td class="Descrizione">Totale Manodopera</td>
+                    <td class="Quantità"></td>
+                    <td class="Prezzo">1.200,00 €</td>
+                    <td class="Prezzo_Mese">100,00 €</td>
+                </tr>
+                <tr class="title">
+                    <td class="Descrizione">Manodopera</td>
+                    <td class="Quantità"></td>
+                    <td class="Prezzo"></td>
+                    <td class="Prezzo_Mese"></td>
+                </tr>
+                <tr class="detail">
+                    <td class="Descrizione">Operatore Base</td>
+                    <td class="Quantità">100 H</td>
+                    <td class="Prezzo">12,00 €</td>
+                    <td class="Prezzo_Mese">1,00 €</td>
+                </tr>
+                <tr class="subtotal">
+                    <td class="Descrizione">Totale Manodopera</td>
+                    <td class="Quantità"></td>
+                    <td class="Prezzo">1.200,00 €</td>
+                    <td class="Prezzo_Mese">100,00 €</td>
+                </tr>
+
+                <tr class="cost_total">
+                    <td class="Descrizione">Totale Costi</td>
+                    <td class="Quantità"></td>
+                    <td class="Prezzo">16.403,69 €</td>
+                    <td class="Prezzo_Mese">1.366,97 €</td>
+                </tr>
+
+                <tr class="title">
+                    <td class="Descrizione">Manodopera</td>
+                    <td class="Quantità"></td>
+                    <td class="Prezzo"></td>
+                    <td class="Prezzo_Mese"></td>
+                </tr>
+                <tr class="detail">
+                    <td class="Descrizione">Operatore Base</td>
+                    <td class="Quantità">100 H</td>
+                    <td class="Prezzo">12,00 €</td>
+                    <td class="Prezzo_Mese">1,00 €</td>
+                </tr>
+                <tr class="subtotal">
+                    <td class="Descrizione">Totale Manodopera</td>
+                    <td class="Quantità"></td>
+                    <td class="Prezzo">1.200,00 €</td>
+                    <td class="Prezzo_Mese">100,00 €</td>
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <tr class="grandtotal">
+                    <td class="Descrizione"></td>
+                    <td class="Quantità">Totale Generale</td>
+                    <td class="Prezzo">17.263,87 €</td>
+                    <td class="Prezzo_Mese">1,438.66 €</td>
+                </tr>
+                <tr class="grandtotal">
+                    <td class="Descrizione"></td>
+                    <td class="Quantità">a MQ</td>
+                    <td class="Prezzo">57.55 €</td>
+                    <td class="Prezzo_Mese">4.80 €</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+</body>
+
+</html>
