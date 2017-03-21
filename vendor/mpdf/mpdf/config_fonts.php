@@ -274,6 +274,10 @@ $this->fontdata = array(
 	"unbatang" => array(/* Korean */
 		'R' => "UnBatang_0613.ttf",
 	),
+	/*Custom*/
+	"latin-extended" => array(
+		'R' => "latin-extended-normal.ttf",
+	),
 );
 
 

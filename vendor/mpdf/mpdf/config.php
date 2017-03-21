@@ -330,8 +330,8 @@ $this->autoPadding = false; // Automatically increases padding in block elements
 // Default values if no style sheet offered	(cf. http://www.w3.org/TR/CSS21/sample.html)
 $this->defaultCSS = array(
 	'BODY' => array(
-		'FONT-FAMILY' => 'serif',
-		'FONT-SIZE' => '11pt',
+		'FONT-FAMILY' => 'calibri',
+		'FONT-SIZE' => '10pt',
 		'TEXT-INDENT' => '0pt',
 		'LINE-HEIGHT' => 'normal',
 		'MARGIN-COLLAPSE' => 'collapse', /* Custom property to collapse top/bottom margins at top/bottom of page - ignored in tables/lists */
@@ -386,7 +386,7 @@ $this->defaultCSS = array(
 	),
 	'PRE' => array(
 		'MARGIN' => '0.83em 0',
-		'FONT-FAMILY' => 'monospace',
+		'FONT-FAMILY' => 'latin-extended',
 	),
 	'S' => array(
 		'TEXT-DECORATION' => 'line-through',
@@ -502,16 +502,16 @@ $this->defaultCSS = array(
 	'TH' => array(
 		'FONT-WEIGHT' => 'bold',
 		'TEXT-ALIGN' => 'center',
-		'PADDING-LEFT' => '0.1em',
-		'PADDING-RIGHT' => '0.1em',
-		'PADDING-TOP' => '0.1em',
-		'PADDING-BOTTOM' => '0.1em',
+		'PADDING-LEFT' => '0em',
+		'PADDING-RIGHT' => '0em',
+		'PADDING-TOP' => '0em',
+		'PADDING-BOTTOM' => '0em',
 	),
 	'TD' => array(
-		'PADDING-LEFT' => '0.1em',
-		'PADDING-RIGHT' => '0.1em',
-		'PADDING-TOP' => '0.1em',
-		'PADDING-BOTTOM' => '0.1em',
+		'PADDING-LEFT' => '0em',
+		'PADDING-RIGHT' => '0em',
+		'PADDING-TOP' => '0em',
+		'PADDING-BOTTOM' => '0em',
 	),
 	'CAPTION' => array(
 		'TEXT-ALIGN' => 'center',

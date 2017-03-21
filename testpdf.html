@@ -12,7 +12,7 @@
     <!-- CUSTOM CSS -->
     <style>
 html {
-  font-family: sans-serif;
+  font-family: latin-extended;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -20,9 +20,673 @@ body {
   margin: 0;
 }
 
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left;
+}
+.col-xs-12 {
+  width: 100%;
+}
+.col-xs-11 {
+  width: 91.66666667%;
+}
+.col-xs-10 {
+  width: 83.33333333%;
+}
+.col-xs-9 {
+  width: 75%;
+}
+.col-xs-8 {
+  width: 66.66666667%;
+}
+.col-xs-7 {
+  width: 58.33333333%;
+}
+.col-xs-6 {
+  width: 50%;
+}
+.col-xs-5 {
+  width: 41.66666667%;
+}
+.col-xs-4 {
+  width: 33.33333333%;
+}
+.col-xs-3 {
+  width: 25%;
+}
+.col-xs-2 {
+  width: 16.66666667%;
+}
+.col-xs-1 {
+  width: 8.33333333%;
+}
+.col-xs-pull-12 {
+  right: 100%;
+}
+.col-xs-pull-11 {
+  right: 91.66666667%;
+}
+.col-xs-pull-10 {
+  right: 83.33333333%;
+}
+.col-xs-pull-9 {
+  right: 75%;
+}
+.col-xs-pull-8 {
+  right: 66.66666667%;
+}
+.col-xs-pull-7 {
+  right: 58.33333333%;
+}
+.col-xs-pull-6 {
+  right: 50%;
+}
+.col-xs-pull-5 {
+  right: 41.66666667%;
+}
+.col-xs-pull-4 {
+  right: 33.33333333%;
+}
+.col-xs-pull-3 {
+  right: 25%;
+}
+.col-xs-pull-2 {
+  right: 16.66666667%;
+}
+.col-xs-pull-1 {
+  right: 8.33333333%;
+}
+.col-xs-push-12 {
+  left: 100%;
+}
+.col-xs-push-11 {
+  left: 91.66666667%;
+}
+.col-xs-push-10 {
+  left: 83.33333333%;
+}
+.col-xs-push-9 {
+  left: 75%;
+}
+.col-xs-push-8 {
+  left: 66.66666667%;
+}
+.col-xs-push-7 {
+  left: 58.33333333%;
+}
+.col-xs-push-6 {
+  left: 50%;
+}
+.col-xs-push-5 {
+  left: 41.66666667%;
+}
+.col-xs-push-4 {
+  left: 33.33333333%;
+}
+.col-xs-push-3 {
+  left: 25%;
+}
+.col-xs-push-2 {
+  left: 16.66666667%;
+}
+.col-xs-push-1 {
+  left: 8.33333333%;
+}
+.col-xs-offset-12 {
+  margin-left: 100%;
+}
+.col-xs-offset-11 {
+  margin-left: 91.66666667%;
+}
+.col-xs-offset-10 {
+  margin-left: 83.33333333%;
+}
+.col-xs-offset-9 {
+  margin-left: 75%;
+}
+.col-xs-offset-8 {
+  margin-left: 66.66666667%;
+}
+.col-xs-offset-7 {
+  margin-left: 58.33333333%;
+}
+.col-xs-offset-6 {
+  margin-left: 50%;
+}
+.col-xs-offset-5 {
+  margin-left: 41.66666667%;
+}
+.col-xs-offset-4 {
+  margin-left: 33.33333333%;
+}
+.col-xs-offset-3 {
+  margin-left: 25%;
+}
+.col-xs-offset-2 {
+  margin-left: 16.66666667%;
+}
+.col-xs-offset-1 {
+  margin-left: 8.33333333%;
+}
+.col-xs-offset-0 {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+  .col-sm-11 {
+    width: 91.66666667%;
+  }
+  .col-sm-10 {
+    width: 83.33333333%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-8 {
+    width: 66.66666667%;
+  }
+  .col-sm-7 {
+    width: 58.33333333%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-5 {
+    width: 41.66666667%;
+  }
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-2 {
+    width: 16.66666667%;
+  }
+  .col-sm-1 {
+    width: 8.33333333%;
+  }
+  .col-sm-pull-12 {
+    right: 100%;
+  }
+  .col-sm-pull-11 {
+    right: 91.66666667%;
+  }
+  .col-sm-pull-10 {
+    right: 83.33333333%;
+  }
+  .col-sm-pull-9 {
+    right: 75%;
+  }
+  .col-sm-pull-8 {
+    right: 66.66666667%;
+  }
+  .col-sm-pull-7 {
+    right: 58.33333333%;
+  }
+  .col-sm-pull-6 {
+    right: 50%;
+  }
+  .col-sm-pull-5 {
+    right: 41.66666667%;
+  }
+  .col-sm-pull-4 {
+    right: 33.33333333%;
+  }
+  .col-sm-pull-3 {
+    right: 25%;
+  }
+  .col-sm-pull-2 {
+    right: 16.66666667%;
+  }
+  .col-sm-pull-1 {
+    right: 8.33333333%;
+  }
+  .col-sm-push-12 {
+    left: 100%;
+  }
+  .col-sm-push-11 {
+    left: 91.66666667%;
+  }
+  .col-sm-push-10 {
+    left: 83.33333333%;
+  }
+  .col-sm-push-9 {
+    left: 75%;
+  }
+  .col-sm-push-8 {
+    left: 66.66666667%;
+  }
+  .col-sm-push-7 {
+    left: 58.33333333%;
+  }
+  .col-sm-push-6 {
+    left: 50%;
+  }
+  .col-sm-push-5 {
+    left: 41.66666667%;
+  }
+  .col-sm-push-4 {
+    left: 33.33333333%;
+  }
+  .col-sm-push-3 {
+    left: 25%;
+  }
+  .col-sm-push-2 {
+    left: 16.66666667%;
+  }
+  .col-sm-push-1 {
+    left: 8.33333333%;
+  }
+  .col-sm-offset-12 {
+    margin-left: 100%;
+  }
+  .col-sm-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-sm-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-sm-offset-9 {
+    margin-left: 75%;
+  }
+  .col-sm-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-sm-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-sm-offset-6 {
+    margin-left: 50%;
+  }
+  .col-sm-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-sm-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-sm-offset-3 {
+    margin-left: 25%;
+  }
+  .col-sm-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-sm-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-sm-offset-0 {
+    margin-left: 0;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+  .col-md-11 {
+    width: 91.66666667%;
+  }
+  .col-md-10 {
+    width: 83.33333333%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-8 {
+    width: 66.66666667%;
+  }
+  .col-md-7 {
+    width: 58.33333333%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-5 {
+    width: 41.66666667%;
+  }
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-2 {
+    width: 16.66666667%;
+  }
+  .col-md-1 {
+    width: 8.33333333%;
+  }
+  .col-md-pull-12 {
+    right: 100%;
+  }
+  .col-md-pull-11 {
+    right: 91.66666667%;
+  }
+  .col-md-pull-10 {
+    right: 83.33333333%;
+  }
+  .col-md-pull-9 {
+    right: 75%;
+  }
+  .col-md-pull-8 {
+    right: 66.66666667%;
+  }
+  .col-md-pull-7 {
+    right: 58.33333333%;
+  }
+  .col-md-pull-6 {
+    right: 50%;
+  }
+  .col-md-pull-5 {
+    right: 41.66666667%;
+  }
+  .col-md-pull-4 {
+    right: 33.33333333%;
+  }
+  .col-md-pull-3 {
+    right: 25%;
+  }
+  .col-md-pull-2 {
+    right: 16.66666667%;
+  }
+  .col-md-pull-1 {
+    right: 8.33333333%;
+  }
+  .col-md-push-12 {
+    left: 100%;
+  }
+  .col-md-push-11 {
+    left: 91.66666667%;
+  }
+  .col-md-push-10 {
+    left: 83.33333333%;
+  }
+  .col-md-push-9 {
+    left: 75%;
+  }
+  .col-md-push-8 {
+    left: 66.66666667%;
+  }
+  .col-md-push-7 {
+    left: 58.33333333%;
+  }
+  .col-md-push-6 {
+    left: 50%;
+  }
+  .col-md-push-5 {
+    left: 41.66666667%;
+  }
+  .col-md-push-4 {
+    left: 33.33333333%;
+  }
+  .col-md-push-3 {
+    left: 25%;
+  }
+  .col-md-push-2 {
+    left: 16.66666667%;
+  }
+  .col-md-push-1 {
+    left: 8.33333333%;
+  }
+  .col-md-offset-12 {
+    margin-left: 100%;
+  }
+  .col-md-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-md-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-md-offset-9 {
+    margin-left: 75%;
+  }
+  .col-md-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-md-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-md-offset-6 {
+    margin-left: 50%;
+  }
+  .col-md-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-md-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-md-offset-3 {
+    margin-left: 25%;
+  }
+  .col-md-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-md-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-md-offset-0 {
+    margin-left: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+  .col-lg-11 {
+    width: 91.66666667%;
+  }
+  .col-lg-10 {
+    width: 83.33333333%;
+  }
+  .col-lg-9 {
+    width: 75%;
+  }
+  .col-lg-8 {
+    width: 66.66666667%;
+  }
+  .col-lg-7 {
+    width: 58.33333333%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-5 {
+    width: 41.66666667%;
+  }
+  .col-lg-4 {
+    width: 33.33333333%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-2 {
+    width: 16.66666667%;
+  }
+  .col-lg-1 {
+    width: 8.33333333%;
+  }
+  .col-lg-pull-12 {
+    right: 100%;
+  }
+  .col-lg-pull-11 {
+    right: 91.66666667%;
+  }
+  .col-lg-pull-10 {
+    right: 83.33333333%;
+  }
+  .col-lg-pull-9 {
+    right: 75%;
+  }
+  .col-lg-pull-8 {
+    right: 66.66666667%;
+  }
+  .col-lg-pull-7 {
+    right: 58.33333333%;
+  }
+  .col-lg-pull-6 {
+    right: 50%;
+  }
+  .col-lg-pull-5 {
+    right: 41.66666667%;
+  }
+  .col-lg-pull-4 {
+    right: 33.33333333%;
+  }
+  .col-lg-pull-3 {
+    right: 25%;
+  }
+  .col-lg-pull-2 {
+    right: 16.66666667%;
+  }
+  .col-lg-pull-1 {
+    right: 8.33333333%;
+  }
+  .col-lg-push-12 {
+    left: 100%;
+  }
+  .col-lg-push-11 {
+    left: 91.66666667%;
+  }
+  .col-lg-push-10 {
+    left: 83.33333333%;
+  }
+  .col-lg-push-9 {
+    left: 75%;
+  }
+  .col-lg-push-8 {
+    left: 66.66666667%;
+  }
+  .col-lg-push-7 {
+    left: 58.33333333%;
+  }
+  .col-lg-push-6 {
+    left: 50%;
+  }
+  .col-lg-push-5 {
+    left: 41.66666667%;
+  }
+  .col-lg-push-4 {
+    left: 33.33333333%;
+  }
+  .col-lg-push-3 {
+    left: 25%;
+  }
+  .col-lg-push-2 {
+    left: 16.66666667%;
+  }
+  .col-lg-push-1 {
+    left: 8.33333333%;
+  }
+  .col-lg-offset-12 {
+    margin-left: 100%;
+  }
+  .col-lg-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-lg-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-lg-offset-9 {
+    margin-left: 75%;
+  }
+  .col-lg-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-lg-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-lg-offset-6 {
+    margin-left: 50%;
+  }
+  .col-lg-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-lg-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-lg-offset-3 {
+    margin-left: 25%;
+  }
+  .col-lg-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-lg-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-lg-offset-0 {
+    margin-left: 0;
+  }
+}
 
+.table-bordered {
+  border: 1px solid #ddd;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 1px solid #ddd;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+  border-bottom-width: 2px;
+}
 
-        .table > thead > tr > th,
+th {
+  text-align: left;
+}
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.table > thead > tr > th,
 .table > tbody > tr > th,
 .table > tfoot > tr > th,
 .table > thead > tr > td,
@@ -51,78 +715,23 @@ body {
 .table .table {
   background-color: #fff;
 }
-.table-bordered {
-  border: 1px solid #ddd;
-}
-.table-bordered > thead > tr > th,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td {
-  border: 1px solid #ddd;
-}
-.table-bordered > thead > tr > th,
-.table-bordered > thead > tr > td {
-  border-bottom-width: 2px;
-}
-table col[class*="col-"] {
-  position: static;
-  display: table-column;
-  float: none;
-}
-table td[class*="col-"],
-table th[class*="col-"] {
-  position: static;
-  display: table-cell;
-  float: none;
-}
-.table > thead > tr > td.active,
-.table > tbody > tr > td.active,
-.table > tfoot > tr > td.active,
-.table > thead > tr > th.active,
-.table > tbody > tr > th.active,
-.table > tfoot > tr > th.active,
-.table > thead > tr.active > td,
-.table > tbody > tr.active > td,
-.table > tfoot > tr.active > td,
-.table > thead > tr.active > th,
-.table > tbody > tr.active > th,
-.table > tfoot > tr.active > th {
-  background-color: #f5f5f5;
-}
 
-.table > thead > tr > td.success,
-.table > tbody > tr > td.success,
-.table > tfoot > tr > td.success,
-.table > thead > tr > th.success,
-.table > tbody > tr > th.success,
-.table > tfoot > tr > th.success,
-.table > thead > tr.success > td,
-.table > tbody > tr.success > td,
-.table > tfoot > tr.success > td,
-.table > thead > tr.success > th,
-.table > tbody > tr.success > th,
-.table > tfoot > tr.success > th {
-  background-color: #dff0d8;
-}
-
-table tr:last-child th:first-child {
+tr:last-child th:first-child {
             -moz-border-radius-topleft: 10px;
             -webkit-border-top-left-radius:10px;
             border-top-left-radius: 10px;
         }
-        table tr:last-child th:last-child {
+        tr:last-child th:last-child {
             -moz-border-radius-topright: 10px;
             -webkit-border-top-right-radius:10px;
             border-top-right-radius: 10px;
         }
-        table tr:last-child td:first-child {
+        tr:last-child td:first-child {
             -moz-border-radius-bottomleft: 10px;
             -webkit-border-bottom-left-radius:10px;
             border-bottom-left-radius: 10px;
         }
-        table tr:last-child td:last-child {
+        tr:last-child td:last-child {
             -moz-border-radius-bottomright: 10px;
             -webkit-border-bottom-right-radius:10px;
             border-bottom-right-radius: 10px;
@@ -132,140 +741,77 @@ table tr:last-child th:first-child {
             background-color: #00427f;
             color: #fff;
             font-size: 115%;
+            padding: 0px;
+            height: 2.3em;
         }
         table{
             width: 100%;
             max-width: 100%;
             margin-bottom: 20px;
-            border: none!important;
+            border: none;
+            border-collapse: collapse;
+            border-spacing: 0px;
         }
 
-        th.Descrizione {
-            text-align: left;
-            color: #fff;
-            background-color: #00427f;
-        }
-        
-        th.Quantità {
-            text-align: right;
-            color: #fff;
-            background-color: #00427f;
-        }
-        
-        th.Prezzo {
-            text-align: right;
-            color: #fff;
-            background-color: #00427f;
-        }
-        
-        th.Prezzo_Mese {
-            text-align: right;
-            color: #fff;
-            background-color: #00427f;
-        }
-        
-        tr.title {
-            font-weight: bold;
-            text-decoration: underline;
-            font-size: 110%;
-            background: #f1f1f1;
-            color: #00427f;
-        }
-        
-        tr.subtotal {
-            font-weight: bold;
-            font-size: 110%;
-            color: #444;
-        }
-        
-        tr.cost_total {
-            font-weight: bold;
-            font-size: 115%;
-            background-color: #999 !important;
-            color: #fff;
-        }
-        
-        td.Quantità,
-        td.Prezzo,
-        td.Prezzo_Mese {
-            text-align: right;
-        }
-        
-        tr.detail {
-            color: #666;
-            text-indent: 20px;
-        }
-        
-        tr.grandtotal {
-            background: #079181;
-            color: #fff;
-            font-size: 115%;
-            text-align: right;
-            font-weight: bold;
-            border: none!important;
-        }
-
-        
-
-
-    </style>
-    <!--<style>
-        table tr:last-child th:first-child {
-            -moz-border-radius-topleft: 10px;
-            -webkit-border-top-left-radius:10px;
-            border-top-left-radius: 10px;
-        }
-        table tr:last-child th:last-child {
-            -moz-border-radius-topright: 10px;
-            -webkit-border-top-right-radius:10px;
-            border-top-right-radius: 10px;
-        }
-
-        table tr:last-child td:first-child {
-            -moz-border-radius-bottomleft: 10px;
-            -webkit-border-bottom-left-radius:10px;
-            border-bottom-left-radius: 10px;
-        }
-        
-        table tr:last-child td:last-child {
-            -moz-border-radius-bottomright: 10px;
-            -webkit-border-bottom-right-radius:10px;
-            border-bottom-right-radius: 10px;
-        }
-        
-        thead.custom_preventivo {
-            background-color: #00427f;
-            color: #fff;
-            font-size: 115%;
-        }
-        table{
-            border: none!important;
-        }
-        
         tr {
-            border-bottom: 1px solid #ddd;
-            border-left: 1px solid #ddd;
-            border-right: 1px solid #ddd;
+            padding: 0px;
+            margin-bottom: 20px;
         }
 
-        thead tr {
-            border: none!important;
+        td {
+            padding: 0px;
+            margin-bottom: 20px;
         }
-        
+
+        td.Descrizione_T {
+            text-align: left;
+            color:#00427f;
+            text-decoration: underline;
+            height: 2.5em;
+            padding-left: 0.5em;
+            font-size: 12px;
+        }
+
         th.Descrizione {
             text-align: left;
+            color: #fff;
+            background-color: #00427f;
+            border-color: #00427f;
+            padding-left: 0.5em;
+            height: 2.5em;
+            font-size: 12px;
         }
         
         th.Quantità {
             text-align: right;
+            color: #fff;
+            background-color: #00427f;
+            border-color: #00427f;
+            padding: 0px;
+            height: 2.5em;
+            padding-right: 0.5em;
+            border:0px;
+            font-size: 12px;
         }
         
         th.Prezzo {
             text-align: right;
+            color: #fff;
+            background-color: #00427f;
+            border-color: #00427f;
+            padding-right: 0.5em;
+            height: 2.5em;
+            font-size: 12px;
         }
         
         th.Prezzo_Mese {
             text-align: right;
+            color: #fff;
+            background-color: #00427f;
+            padding-right: 0.5em;
+            border-color: #00427f;
+            height: 2.5em;
+            font-size: 12px;
         }
         
         tr.title {
@@ -281,18 +827,75 @@ table tr:last-child th:first-child {
             font-size: 110%;
             color: #444;
         }
-        
-        tr.cost_total {
+
+        td.Prezzo_Mese_ct,
+        td.Quantità_ct,
+        td.Prezzo_ct {
             font-weight: bold;
             font-size: 115%;
             background-color: #999 !important;
+            height: 2.5em;
+            padding-right: 0.5em;
+            text-align: right;
             color: #fff;
+            font-size: 12px;
+        }
+
+        td.Descrizione_ct {
+            font-weight: bold;
+            font-size: 115%;
+            background-color: #999 !important;
+            height: 2.5em;
+            padding-left: 0.5em;
+            text-align: left;
+            color: #fff;
+            font-size: 12px;
         }
         
         td.Quantità,
         td.Prezzo,
         td.Prezzo_Mese {
             text-align: right;
+        }
+
+        td.Quantità_I,
+        td.Prezzo_I,
+        td.Prezzo_Mese_I {
+            text-align: right;
+            color: #666;
+            padding-right: 0.5em;
+            border-bottom: 0.5px solid;
+            height: 3em;
+            font-size: 11px;
+        }
+
+        td.Descrizione_I {
+            text-align: left;
+            color: #666;
+            padding-left: 2em;
+            height: 3em;
+            border-bottom: 0.5px solid;
+            font-size: 11px;
+        }
+
+        td.Quantità_st,
+        td.Prezzo_st,
+        td.Prezzo_Mese_st {
+            text-align: right;
+            color: #000;
+            padding-right: 0.5em;
+            height: 2.5em;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        td.Descrizione_st {
+            text-align: left;
+            color: #000;
+            padding-left: 0.5em;
+            height: 2.5em;
+            font-weight: bold;
+            font-size: 12px;
         }
         
         tr.detail {
@@ -309,8 +912,17 @@ table tr:last-child th:first-child {
             border: none!important;
         }
 
-        
-    </style>-->
+        tr.grandtotal td {
+            background: #079181;
+            color: #fff;
+            text-align: right;
+            font-weight: bold;
+            height: 1.8em;
+            border: none!important;
+            font-size: 12px;
+            padding-right: 0.5em;
+        }
+    </style>
 </head>
 
 <body>
@@ -329,254 +941,66 @@ table tr:last-child th:first-child {
             </thead>
             <tbody>
                 <tr class="title">
-                    <td class="Descrizione">Manodopera</td>
+                    <td class="Descrizione_T">Manodopera</td>
                     <td class="Quantità"></td>
                     <td class="Prezzo"></td>
                     <td class="Prezzo_Mese"></td>
                 </tr>
                 <tr class="detail">
-                    <td class="Descrizione">Operatore Base</td>
-                    <td class="Quantità">100 H</td>
-                    <td class="Prezzo">12,00 €</td>
-                    <td class="Prezzo_Mese">1,00 €</td>
+                    <td class="Descrizione_I">Operatore Base</td>
+                    <td class="Quantità_I">100 H</td>
+                    <td class="Prezzo_I">12,00 €</td>
+                    <td class="Prezzo_Mese_I">1,00 €</td>
                 </tr>
                 <tr class="subtotal">
-                    <td class="Descrizione">Totale Manodopera</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo">1.200,00 €</td>
-                    <td class="Prezzo_Mese">100,00 €</td>
+                    <td class="Descrizione_st">Totale Manodopera</td>
+                    <td class="Quantità_st"></td>
+                    <td class="Prezzo_st">1.200,00 €</td>
+                    <td class="Prezzo_Mese_st">100,00 €</td>
                 </tr>
                 <tr class="title">
-                    <td class="Descrizione">Manodopera</td>
+                    <td class="Descrizione_T">Manodopera</td>
                     <td class="Quantità"></td>
                     <td class="Prezzo"></td>
                     <td class="Prezzo_Mese"></td>
                 </tr>
                 <tr class="detail">
-                    <td class="Descrizione">Operatore Base</td>
-                    <td class="Quantità">100 H</td>
-                    <td class="Prezzo">12,00 €</td>
-                    <td class="Prezzo_Mese">1,00 €</td>
+                    <td class="Descrizione_I">Operatore Base</td>
+                    <td class="Quantità_I">100 H</td>
+                    <td class="Prezzo_I">12,00 €</td>
+                    <td class="Prezzo_Mese_I">1,00 €</td>
                 </tr>
                 <tr class="subtotal">
-                    <td class="Descrizione">Totale Manodopera</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo">1.200,00 €</td>
-                    <td class="Prezzo_Mese">100,00 €</td>
+                    <td class="Descrizione_st">Totale Manodopera</td>
+                    <td class="Quantità_st"></td>
+                    <td class="Prezzo_st">1.200,00 €</td>
+                    <td class="Prezzo_Mese_st">100,00 €</td>
                 </tr>
 
                 <tr class="cost_total">
-                    <td class="Descrizione">Totale Costi</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo">16.403,69 €</td>
-                    <td class="Prezzo_Mese">1.366,97 €</td>
+                    <td class="Descrizione_ct">Totale Costi</td>
+                    <td class="Quantità_ct"></td>
+                    <td class="Prezzo_ct">16.403,69 €</td>
+                    <td class="Prezzo_Mese_ct">1.366,97 €</td>
                 </tr>
 
                 <tr class="title">
-                    <td class="Descrizione">Manodopera</td>
+                    <td class="Descrizione_T">Manodopera</td>
                     <td class="Quantità"></td>
                     <td class="Prezzo"></td>
                     <td class="Prezzo_Mese"></td>
                 </tr>
                 <tr class="detail">
-                    <td class="Descrizione">Operatore Base</td>
-                    <td class="Quantità">100 H</td>
-                    <td class="Prezzo">12,00 €</td>
-                    <td class="Prezzo_Mese">1,00 €</td>
+                    <td class="Descrizione_I">Operatore Base</td>
+                    <td class="Quantità_I">100 H</td>
+                    <td class="Prezzo_I">12,00 €</td>
+                    <td class="Prezzo_Mese_I">1,00 €</td>
                 </tr>
                 <tr class="subtotal">
-                    <td class="Descrizione">Totale Manodopera</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo">1.200,00 €</td>
-                    <td class="Prezzo_Mese">100,00 €</td>
-                </tr>
-
-            </tbody>
-            <tfoot>
-                <tr class="grandtotal">
-                    <td class="Descrizione"></td>
-                    <td class="Quantità">Totale Generale</td>
-                    <td class="Prezzo">17.263,87 €</td>
-                    <td class="Prezzo_Mese">1,438.66 €</td>
-                </tr>
-                <tr class="grandtotal">
-                    <td class="Descrizione"></td>
-                    <td class="Quantità">a MQ</td>
-                    <td class="Prezzo">57.55 €</td>
-                    <td class="Prezzo_Mese">4.80 €</td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
-
-    <div class="container">
-        <h2>Preventivo dt</h2>
-        <p>Esempio tabella preventivo dt</p>
-        <table class="table table-bordered custom_preventivo">
-            <thead class="custom_preventivo">
-                <tr>
-                    <th class="Descrizione col-md-6">Descrizione</th>
-                    <th class="Quantità col-md-2">Quantità</th>
-                    <th class="Prezzo col-md-2">Prezzo</th>
-                    <th class="Prezzo_Mese col-md-2">Prezzo Mese</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="title">
-                    <td class="Descrizione">Manodopera</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo"></td>
-                    <td class="Prezzo_Mese"></td>
-                </tr>
-                <tr class="detail">
-                    <td class="Descrizione">Operatore Base</td>
-                    <td class="Quantità">100 H</td>
-                    <td class="Prezzo">12,00 €</td>
-                    <td class="Prezzo_Mese">1,00 €</td>
-                </tr>
-                <tr class="subtotal">
-                    <td class="Descrizione">Totale Manodopera</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo">1.200,00 €</td>
-                    <td class="Prezzo_Mese">100,00 €</td>
-                </tr>
-                <tr class="title">
-                    <td class="Descrizione">Manodopera</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo"></td>
-                    <td class="Prezzo_Mese"></td>
-                </tr>
-                <tr class="detail">
-                    <td class="Descrizione">Operatore Base</td>
-                    <td class="Quantità">100 H</td>
-                    <td class="Prezzo">12,00 €</td>
-                    <td class="Prezzo_Mese">1,00 €</td>
-                </tr>
-                <tr class="subtotal">
-                    <td class="Descrizione">Totale Manodopera</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo">1.200,00 €</td>
-                    <td class="Prezzo_Mese">100,00 €</td>
-                </tr>
-
-                <tr class="cost_total">
-                    <td class="Descrizione">Totale Costi</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo">16.403,69 €</td>
-                    <td class="Prezzo_Mese">1.366,97 €</td>
-                </tr>
-
-                <tr class="title">
-                    <td class="Descrizione">Manodopera</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo"></td>
-                    <td class="Prezzo_Mese"></td>
-                </tr>
-                <tr class="detail">
-                    <td class="Descrizione">Operatore Base</td>
-                    <td class="Quantità">100 H</td>
-                    <td class="Prezzo">12,00 €</td>
-                    <td class="Prezzo_Mese">1,00 €</td>
-                </tr>
-                <tr class="subtotal">
-                    <td class="Descrizione">Totale Manodopera</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo">1.200,00 €</td>
-                    <td class="Prezzo_Mese">100,00 €</td>
-                </tr>
-
-            </tbody>
-            <tfoot>
-                <tr class="grandtotal">
-                    <td class="Descrizione"></td>
-                    <td class="Quantità">Totale Generale</td>
-                    <td class="Prezzo">17.263,87 €</td>
-                    <td class="Prezzo_Mese">1,438.66 €</td>
-                </tr>
-                <tr class="grandtotal">
-                    <td class="Descrizione"></td>
-                    <td class="Quantità">a MQ</td>
-                    <td class="Prezzo">57.55 €</td>
-                    <td class="Prezzo_Mese">4.80 €</td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
-
-    <div class="container">
-        <h2>Preventivo dt</h2>
-        <p>Esempio tabella preventivo dt</p>
-        <table class="table table-bordered custom_preventivo">
-            <thead class="custom_preventivo">
-                <tr>
-                    <th class="Descrizione col-md-6">Descrizione</th>
-                    <th class="Quantità col-md-2">Quantità</th>
-                    <th class="Prezzo col-md-2">Prezzo</th>
-                    <th class="Prezzo_Mese col-md-2">Prezzo Mese</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="title">
-                    <td class="Descrizione">Manodopera</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo"></td>
-                    <td class="Prezzo_Mese"></td>
-                </tr>
-                <tr class="detail">
-                    <td class="Descrizione">Operatore Base</td>
-                    <td class="Quantità">100 H</td>
-                    <td class="Prezzo">12,00 €</td>
-                    <td class="Prezzo_Mese">1,00 €</td>
-                </tr>
-                <tr class="subtotal">
-                    <td class="Descrizione">Totale Manodopera</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo">1.200,00 €</td>
-                    <td class="Prezzo_Mese">100,00 €</td>
-                </tr>
-                <tr class="title">
-                    <td class="Descrizione">Manodopera</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo"></td>
-                    <td class="Prezzo_Mese"></td>
-                </tr>
-                <tr class="detail">
-                    <td class="Descrizione">Operatore Base</td>
-                    <td class="Quantità">100 H</td>
-                    <td class="Prezzo">12,00 €</td>
-                    <td class="Prezzo_Mese">1,00 €</td>
-                </tr>
-                <tr class="subtotal">
-                    <td class="Descrizione">Totale Manodopera</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo">1.200,00 €</td>
-                    <td class="Prezzo_Mese">100,00 €</td>
-                </tr>
-
-                <tr class="cost_total">
-                    <td class="Descrizione">Totale Costi</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo">16.403,69 €</td>
-                    <td class="Prezzo_Mese">1.366,97 €</td>
-                </tr>
-
-                <tr class="title">
-                    <td class="Descrizione">Manodopera</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo"></td>
-                    <td class="Prezzo_Mese"></td>
-                </tr>
-                <tr class="detail">
-                    <td class="Descrizione">Operatore Base</td>
-                    <td class="Quantità">100 H</td>
-                    <td class="Prezzo">12,00 €</td>
-                    <td class="Prezzo_Mese">1,00 €</td>
-                </tr>
-                <tr class="subtotal">
-                    <td class="Descrizione">Totale Manodopera</td>
-                    <td class="Quantità"></td>
-                    <td class="Prezzo">1.200,00 €</td>
-                    <td class="Prezzo_Mese">100,00 €</td>
+                    <td class="Descrizione_st">Totale Manodopera</td>
+                    <td class="Quantità_st"></td>
+                    <td class="Prezzo_st">1.200,00 €</td>
+                    <td class="Prezzo_Mese_st">100,00 €</td>
                 </tr>
 
             </tbody>
