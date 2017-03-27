@@ -15,14 +15,17 @@ class Genpdf {
 
     protected $mpdf; //mPDF library
 
-    protected $title; //document title (meta)
-    protected $author; //document author (meta)
-    protected $creator; //document creator (meta)
-    protected $subject; //document subject (meta)
-    protected $keywords; //document keywords (meta)
+    protected $title = false; //document title (meta)
+    protected $author = false; //document author (meta)
+    protected $creator = false; //document creator (meta)
+    protected $subject = false; //document subject (meta)
+    protected $keywords = false; //document keywords (meta)
     protected $password = null; //document password (if null no password will be set)
+    protected $css = false;
 
-    protected $css; //css for the html file
+    private $_values = array(); //values for the file
+    protected $html = null; //html raw data
+    protected $template; //generated template (html format)
 
     private $_overwrite = 0; //how to handle setters for existing properties
     private $_overwriteOverride = false; //keep overwrite past first setter (true) or reset it back to 0 (false)
@@ -32,29 +35,29 @@ class Genpdf {
     }
 
     /*
-     * MAGIC setter;
+     * binder;
      * @params (string) $property, (multi) $value;
      * @returns $this;
-     * if $this->$property is missing will set it as $value
+     * if $this->_values[$property] is missing will set it as $value
      * else will check $this->_overwrite: 0 => ignore; 1 => append; 2 => replace
      * if $this->_overwriteOverride is true, $this->overwrite is kept as is, otherwise is set back to 0;
      */
-    public function __set($property, $value) {
+    public function bind($property, $value) {
         $this->_debug("Setting " . $property . " as " . $value, 99);
         //check if the property has already been set
-        if(property_exists($this, $property)) {
-            $this->_debug("\$this->\$property already exists as " . $this->$property, 0);
+        if(array_key_exists($property, $this->_values)) {
+            $this->_debug("\$this->_values[$property] already exists as " . $this->_values[$property], 0);
             if($this->_overwrite === 2) {
-                $this->$property = $value;
-                $this->_debug("\$this->\$property overwritten as " . $value, 0);
+                $this->_values[$property] = $value;
+                $this->_debug("\$this->_values[$property] overwritten as " . $value, 0);
             } elseif($this->_overwrite === 1) {
-                $this->_debug("\$this->\$property got " . $value . " appended", 0);
-                $this->$property .= $value;
+                $this->_debug("\$this->_values[$property] got " . $value . " appended", 0);
+                $this->_values[$property] .= $value;
             }
         } else {
-            $this->_debug("\$this->\$property got " . $value . " as value", 0);
+            $this->_debug("\$this->_values[$property] got " . $value . " as value", 0);
             //we are gonna create a new variable
-            $this->$property = $value;
+            $this->_values[$property] = $value;
         }
 
         if($this->_overwriteOverride === false) {
@@ -63,6 +66,90 @@ class Genpdf {
         }
 
         return $this;
+    }
+
+    /*
+     * @params (string) $filename;
+     * @returns $this;
+     * generte the pdf file
+     */
+    public function generate(string $filename) {
+        if($this->title !== null)    $this->mpdf->SetTitle($this->title);
+        if($this->author !== null)   $this->mpdf->SetAuthor($this->author);
+        if($this->creator !== null)  $this->mpdf->SetCreator($this->creator);
+        if($this->subject !== null)  $this->mpdf->SetSubject($this->subject);
+        if($this->keywords !== null) $this->mpdf->SetKeywords($this->keywords);
+        if($this->password !== null) $this->mpdf->SetProtection(array(), $this->password);
+        if($this->css !== null)      $this->mpdf->WriteHTML($this->css, 1);
+
+        $fullpath = "./pdf/" . $filename;
+        $this->_debug("writing to " . $fullpath);
+        if(file_exists($fullpath)) {
+            $this->_debug($fullpath . " already exists, overwriting...", 1);
+        }
+
+        $this->mpdf->Output($fullpath, 'F');
+    }
+
+    /*
+     * @params void;
+     * returns $this;
+     * binds template to variables
+     */
+    public function replaceAll() {
+        $this->_debug("Starting html templating replace", 99);
+        if($this->html !== null) {
+            //finding all the bracket occurrences
+            $template = $this->html;
+            if (preg_match_all("/{{(.*?)}}/", $template, $m)) {
+                foreach ($m[1] as $i => $varname) {
+                    if(array_key_exists($varname, $this->_values)) $template = str_replace($m[0][$i], sprintf('%s', $this->_values[$varname]), $template);
+                }
+            }
+
+            //saving the result
+            $this->template = $template;
+        } else {
+            $this->_debug("It appears like the template is empty", 2);
+        }
+
+        return $this;
+    }
+
+    /*
+     * @params (string) $html;
+     * returns $this;
+     * binds html data to the protected $this->html
+     */
+    public function saveHtml($html) {
+        $this->html = $html;
+
+        return $this;
+    }
+
+    /*
+     * @params (string) $name, (string) $val;
+     * resurns $this;
+     * A simple setter...
+     */
+    public function set($name, $val) {
+        $this->$name = $val;
+
+        return $his;
+    }
+
+    /*
+     * @params (string) $val;
+     * returns $this->$val on success, false on faliure
+     * A simple getter...
+     */
+    public function get($val) {
+        if(property_exists($this, $val)) {
+            return $this->$val;
+        } else {
+            $this->_debug("\$this->" . $val . " doesn't exists", 2);
+            return false;
+        }
     }
 
     /*
@@ -98,6 +185,22 @@ class Genpdf {
      */
     public function getDebug() {
         return $this->_debugLog;
+    }
+
+    /*
+     * @params void;
+     * @returns void;
+     * Shows debug
+     */
+    public function showDebug() {
+        echo "<hr><h3>Debug</h3>";
+        if(count($this->_debugLog) > 0) {
+            foreach($this->_debugLog as $k => $v) {
+                echo "<p style='color:" . $v['color'] . "'>" . $v['text'] . "</p>";
+            }
+        } else {
+            echo "<p style='color:#00ff00'>Everything seems to be fine...</p>";
+        }
     }
 
     /*
