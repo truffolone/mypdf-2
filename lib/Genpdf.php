@@ -88,6 +88,7 @@ class Genpdf {
             $this->_debug($fullpath . " already exists, overwriting...", 1);
         }
 
+        $this->mpdf->WriteHTML($this->html, 2);
         $this->mpdf->Output($fullpath, 'F');
     }
 

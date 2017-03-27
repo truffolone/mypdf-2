@@ -17,7 +17,7 @@ $html = $header . $content . $footer;
 $pdf->saveHtml($html);
 
 $pdf->set("css", file_get_contents("./css/embedded.css"));
-$pdf->bind("title", "Titolo PDF");
+$pdf->set("title", "Titolo PDF");
 
 $pdf->replaceAll();
 
