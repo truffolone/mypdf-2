@@ -19,11 +19,29 @@ $pdf->saveHtml($html);
 $pdf->set("css", file_get_contents("./css/embedded.css"));
 $pdf->set("title", "Titolo PDF");
 
+$pdf->bind("headerimg", "<img src=\"./partials/trasporti.jpg\">");
+$pdf->bind("prevtitle", "Preventivo N.788 del 27/03/2017");
+$pdf->bind("previcon", "<img src=\"./partials/demo.png\" class=\"littleimg\">");
+$pdf->bind("cliente", "Cliente");
+$pdf->bind("clientename", "La rapida");
+$pdf->bind("clienteicon", "<img src=\"./partials/all.jpg\" class=\"littleimg\">");
+$pdf->bind("durata", "Durata");
+$pdf->bind("durataprev", "1 anno");
+$pdf->bind("clienteicon2", "<img src=\"./partials/all.jpg\" class=\"littleimg2\">");
+$pdf->bind("previcon2", "<img src=\"./partials/demo.png\" class=\"littleimg2\">");
+$pdf->bind("spettabile", "Spettabile");
+$pdf->bind("address", nl2br("La rapida
+                            Via Einaudi 23
+                            92032 Foggia
+                            (FG)"));
+$pdf->bind("prevtitle2", nl2br("Preventivo N.788 del 27/03/2017
+                                Durata anni 1"));
+
 $pdf->replaceAll();
 
-$pdf->generate("prova.pdf");
+$pdf->generate("prova.pdf", true);
 
-$pdf->showDebug();
+//$pdf->showDebug();
 
 //$mpdf->WriteHTML($html);
 

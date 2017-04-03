@@ -1,91 +1,125 @@
-<h2>Preventivo dt</h2>
-<p>Esempio tabella preventivo dt</p>
-<table class="table table-bordered custom_preventivo">
-    <thead class="custom_preventivo">
-        <tr>
-            <th class="Descrizione col-md-6">Descrizione</th>
-            <th class="Quantità col-md-2">Quantità</th>
-            <th class="Prezzo col-md-2">Prezzo</th>
-            <th class="Prezzo_Mese col-md-2">Prezzo Mese</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="title">
-            <td class="Descrizione_T">Manodopera</td>
-            <td class="Quantità"></td>
-            <td class="Prezzo"></td>
-            <td class="Prezzo_Mese"></td>
-        </tr>
-        <tr class="detail">
-            <td class="Descrizione_I">Operatore Base</td>
-            <td class="Quantità_I">100 H</td>
-            <td class="Prezzo_I">12,00 €</td>
-            <td class="Prezzo_Mese_I">1,00 €</td>
-        </tr>
-        <tr class="subtotal">
-            <td class="Descrizione_st">Totale Manodopera</td>
-            <td class="Quantità_st"></td>
-            <td class="Prezzo_st">1.200,00 €</td>
-            <td class="Prezzo_Mese_st">100,00 €</td>
-        </tr>
-        <tr class="title">
-            <td class="Descrizione_T">Manodopera</td>
-            <td class="Quantità"></td>
-            <td class="Prezzo"></td>
-            <td class="Prezzo_Mese"></td>
-        </tr>
-        <tr class="detail">
-            <td class="Descrizione_I">Operatore Base</td>
-            <td class="Quantità_I">100 H</td>
-            <td class="Prezzo_I">12,00 €</td>
-            <td class="Prezzo_Mese_I">1,00 €</td>
-        </tr>
-        <tr class="subtotal">
-            <td class="Descrizione_st">Totale Manodopera</td>
-            <td class="Quantità_st"></td>
-            <td class="Prezzo_st">1.200,00 €</td>
-            <td class="Prezzo_Mese_st">100,00 €</td>
-        </tr>
-
-        <tr class="cost_total">
-            <td class="Descrizione_ct">Totale Costi</td>
-            <td class="Quantità_ct"></td>
-            <td class="Prezzo_ct">16.403,69 €</td>
-            <td class="Prezzo_Mese_ct">1.366,97 €</td>
-        </tr>
-
-        <tr class="title">
-            <td class="Descrizione_T">Manodopera</td>
-            <td class="Quantità"></td>
-            <td class="Prezzo"></td>
-            <td class="Prezzo_Mese"></td>
-        </tr>
-        <tr class="detail">
-            <td class="Descrizione_I">Operatore Base</td>
-            <td class="Quantità_I">100 H</td>
-            <td class="Prezzo_I">12,00 €</td>
-            <td class="Prezzo_Mese_I">1,00 €</td>
-        </tr>
-        <tr class="subtotal">
-            <td class="Descrizione_st">Totale Manodopera</td>
-            <td class="Quantità_st"></td>
-            <td class="Prezzo_st">1.200,00 €</td>
-            <td class="Prezzo_Mese_st">100,00 €</td>
-        </tr>
-
-    </tbody>
-    <tfoot>
-        <tr class="grandtotal">
-            <td class="Descrizione"></td>
-            <td class="Quantità">Totale Generale</td>
-            <td class="Prezzo">17.263,87 €</td>
-            <td class="Prezzo_Mese">1,438.66 €</td>
-        </tr>
-        <tr class="grandtotal">
-            <td class="Descrizione"></td>
-            <td class="Quantità">a MQ</td>
-            <td class="Prezzo">57.55 €</td>
-            <td class="Prezzo_Mese">4.80 €</td>
-        </tr>
-    </tfoot>
+<div class="col-md-12 text-center">
+    {{headerimg}}
+</div>
+<br>
+<div class="col-md-12 prev-title text-center">
+    <h2>{{prevtitle}}</h2>
+</div>
+<br>
+<div class="col-md-12 text-center">
+    {{previcon}}
+    <h2 class="semititle">{{cliente}}</h2>
+    <p class="testo">{{clientename}}</p>
+    {{clienteicon}}
+    <h2 class="semititle">{{durata}}</h2>
+    <p class="testo">{{durataprev}}</p>
+</div>
+<pagebreak>
+<table class="table">
+    <tr>
+        <td width="15%" valign="top">{{clienteicon2}}</td>
+        <td width="15%" valign="top">{{previcon2}}</td>
+        <td width="30%"></td>
+        <td width="40%" class="prevright">
+            <b>{{spettabile}}</b><br>
+            {{address}}
+        </td>
+    </tr>
 </table>
+<div class="col-md-12 prev-title2 text-center">
+    <h2>{{prevtitle2}}</h2>
+</div>
+<pagebreak>
+<div class="col-md-12">
+    <h2>Preventivo dt</h2>
+    <p>Esempio tabella preventivo dt</p>
+    <table class="table table-bordered custom_preventivo">
+        <thead class="custom_preventivo">
+            <tr>
+                <th class="Descrizione col-md-6">Descrizione</th>
+                <th class="Quantità col-md-2">Quantità</th>
+                <th class="Prezzo col-md-2">Prezzo</th>
+                <th class="Prezzo_Mese col-md-2">Prezzo Mese</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="title">
+                <td class="Descrizione_T">Manodopera</td>
+                <td class="Quantità"></td>
+                <td class="Prezzo"></td>
+                <td class="Prezzo_Mese"></td>
+            </tr>
+            <tr class="detail">
+                <td class="Descrizione_I">Operatore Base</td>
+                <td class="Quantità_I">100 H</td>
+                <td class="Prezzo_I">12,00 €</td>
+                <td class="Prezzo_Mese_I">1,00 €</td>
+            </tr>
+            <tr class="subtotal">
+                <td class="Descrizione_st">Totale Manodopera</td>
+                <td class="Quantità_st"></td>
+                <td class="Prezzo_st">1.200,00 €</td>
+                <td class="Prezzo_Mese_st">100,00 €</td>
+            </tr>
+            <tr class="title">
+                <td class="Descrizione_T">Manodopera</td>
+                <td class="Quantità"></td>
+                <td class="Prezzo"></td>
+                <td class="Prezzo_Mese"></td>
+            </tr>
+            <tr class="detail">
+                <td class="Descrizione_I">Operatore Base</td>
+                <td class="Quantità_I">100 H</td>
+                <td class="Prezzo_I">12,00 €</td>
+                <td class="Prezzo_Mese_I">1,00 €</td>
+            </tr>
+            <tr class="subtotal">
+                <td class="Descrizione_st">Totale Manodopera</td>
+                <td class="Quantità_st"></td>
+                <td class="Prezzo_st">1.200,00 €</td>
+                <td class="Prezzo_Mese_st">100,00 €</td>
+            </tr>
+
+            <tr class="cost_total">
+                <td class="Descrizione_ct">Totale Costi</td>
+                <td class="Quantità_ct"></td>
+                <td class="Prezzo_ct">16.403,69 €</td>
+                <td class="Prezzo_Mese_ct">1.366,97 €</td>
+            </tr>
+
+            <tr class="title">
+                <td class="Descrizione_T">Manodopera</td>
+                <td class="Quantità"></td>
+                <td class="Prezzo"></td>
+                <td class="Prezzo_Mese"></td>
+            </tr>
+            <tr class="detail">
+                <td class="Descrizione_I">Operatore Base</td>
+                <td class="Quantità_I">100 H</td>
+                <td class="Prezzo_I">12,00 €</td>
+                <td class="Prezzo_Mese_I">1,00 €</td>
+            </tr>
+            <tr class="subtotal">
+                <td class="Descrizione_st">Totale Manodopera</td>
+                <td class="Quantità_st"></td>
+                <td class="Prezzo_st">1.200,00 €</td>
+                <td class="Prezzo_Mese_st">100,00 €</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr class="grandtotal">
+                <td class="Descrizione"></td>
+                <td class="Quantità">Totale Generale</td>
+                <td class="Prezzo">17.263,87 €</td>
+                <td class="Prezzo_Mese">1,438.66 €</td>
+            </tr>
+            <tr class="grandtotal">
+                <td class="Descrizione"></td>
+                <td class="Quantità">a MQ</td>
+                <td class="Prezzo">57.55 €</td>
+                <td class="Prezzo_Mese">4.80 €</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

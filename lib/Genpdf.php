@@ -69,11 +69,11 @@ class Genpdf {
     }
 
     /*
-     * @params (string) $filename;
+     * @params (string) $filename, (bool) $show;
      * @returns $this;
-     * generte the pdf file
+     * generte the pdf file, if $show then loads the generated pdf into the page;
      */
-    public function generate(string $filename) {
+    public function generate(string $filename, bool $show) {
         if($this->title !== null)    $this->mpdf->SetTitle($this->title);
         if($this->author !== null)   $this->mpdf->SetAuthor($this->author);
         if($this->creator !== null)  $this->mpdf->SetCreator($this->creator);
@@ -88,8 +88,14 @@ class Genpdf {
             $this->_debug($fullpath . " already exists, overwriting...", 1);
         }
 
-        $this->mpdf->WriteHTML($this->html, 2);
+        $this->mpdf->WriteHTML($this->template, 2);
         $this->mpdf->Output($fullpath, 'F');
+
+        if($show === true) {
+            $this->mpdf->Output();
+        }
+
+        return $this;
     }
 
     /*
@@ -104,7 +110,10 @@ class Genpdf {
             $template = $this->html;
             if (preg_match_all("/{{(.*?)}}/", $template, $m)) {
                 foreach ($m[1] as $i => $varname) {
-                    if(array_key_exists($varname, $this->_values)) $template = str_replace($m[0][$i], sprintf('%s', $this->_values[$varname]), $template);
+                    if(array_key_exists($varname, $this->_values)) {
+                        $this->_debug("setting " . $m[0][$i] . " as " . $this->_values[$varname]);
+                        $template = str_replace($m[0][$i], $this->_values[$varname], $template);
+                    } 
                 }
             }
 

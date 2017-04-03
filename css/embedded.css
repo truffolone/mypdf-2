@@ -7,6 +7,37 @@ body {
   margin: 0;
 }
 
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+.text-muted {
+  color: #777;
+}
+.text-primary {
+  color: #337ab7;
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -700,208 +731,242 @@ th {
 }
 
 tr:last-child th:first-child {
-            -moz-border-radius-topleft: 10px;
-            -webkit-border-top-left-radius:10px;
-            border-top-left-radius: 10px;
-        }
-        tr:last-child th:last-child {
-            -moz-border-radius-topright: 10px;
-            -webkit-border-top-right-radius:10px;
-            border-top-right-radius: 10px;
-        }
-        tr:last-child td:first-child {
-            -moz-border-radius-bottomleft: 10px;
-            -webkit-border-bottom-left-radius:10px;
-            border-bottom-left-radius: 10px;
-        }
-        tr:last-child td:last-child {
-            -moz-border-radius-bottomright: 10px;
-            -webkit-border-bottom-right-radius:10px;
-            border-bottom-right-radius: 10px;
-        }
+    -moz-border-radius-topleft: 10px;
+    -webkit-border-top-left-radius:10px;
+    border-top-left-radius: 10px;
+}
+tr:last-child th:last-child {
+    -moz-border-radius-topright: 10px;
+    -webkit-border-top-right-radius:10px;
+    border-top-right-radius: 10px;
+}
+tr:last-child td:first-child {
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-left-radius:10px;
+    border-bottom-left-radius: 10px;
+}
+tr:last-child td:last-child {
+    -moz-border-radius-bottomright: 10px;
+    -webkit-border-bottom-right-radius:10px;
+    border-bottom-right-radius: 10px;
+}
 
-        thead.custom_preventivo {
-            background-color: #00427f;
-            color: #fff;
-            font-size: 115%;
-            padding: 0px;
-            height: 2.3em;
-        }
-        table{
-            width: 100%;
-            max-width: 100%;
-            margin-bottom: 20px;
-            border: none;
-            border-collapse: collapse;
-            border-spacing: 0px;
-        }
+thead.custom_preventivo {
+    background-color: #00427f;
+    color: #fff;
+    font-size: 115%;
+    padding: 0px;
+    height: 2.3em;
+}
+table{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
 
-        tr {
-            padding: 0px;
-            margin-bottom: 20px;
-        }
+tr {
+    padding: 0px;
+    margin-bottom: 20px;
+}
 
-        td {
-            padding: 0px;
-            margin-bottom: 20px;
-        }
+td {
+    padding: 0px;
+    margin-bottom: 20px;
+}
 
-        td.Descrizione_T {
-            text-align: left;
-            color:#00427f;
-            text-decoration: underline;
-            height: 2.5em;
-            padding-left: 0.5em;
-            font-size: 12px;
-        }
+td.Descrizione_T {
+    text-align: left;
+    color:#00427f;
+    text-decoration: underline;
+    height: 2.5em;
+    padding-left: 0.5em;
+    font-size: 12px;
+}
 
-        th.Descrizione {
-            text-align: left;
-            color: #fff;
-            background-color: #00427f;
-            border-color: #00427f;
-            padding-left: 0.5em;
-            height: 2.5em;
-            font-size: 12px;
-        }
-        
-        th.Quantità {
-            text-align: right;
-            color: #fff;
-            background-color: #00427f;
-            border-color: #00427f;
-            padding: 0px;
-            height: 2.5em;
-            padding-right: 0.5em;
-            border:0px;
-            font-size: 12px;
-        }
-        
-        th.Prezzo {
-            text-align: right;
-            color: #fff;
-            background-color: #00427f;
-            border-color: #00427f;
-            padding-right: 0.5em;
-            height: 2.5em;
-            font-size: 12px;
-        }
-        
-        th.Prezzo_Mese {
-            text-align: right;
-            color: #fff;
-            background-color: #00427f;
-            padding-right: 0.5em;
-            border-color: #00427f;
-            height: 2.5em;
-            font-size: 12px;
-        }
-        
-        tr.title {
-            font-weight: bold;
-            text-decoration: underline;
-            font-size: 110%;
-            background: #f1f1f1;
-            color: #00427f;
-        }
-        
-        tr.subtotal {
-            font-weight: bold;
-            font-size: 110%;
-            color: #444;
-        }
+th.Descrizione {
+    text-align: left;
+    color: #fff;
+    background-color: #00427f;
+    border-color: #00427f;
+    padding-left: 0.5em;
+    height: 2.5em;
+    font-size: 12px;
+}
 
-        td.Prezzo_Mese_ct,
-        td.Quantità_ct,
-        td.Prezzo_ct {
-            font-weight: bold;
-            font-size: 115%;
-            background-color: #999 !important;
-            height: 2.5em;
-            padding-right: 0.5em;
-            text-align: right;
-            color: #fff;
-            font-size: 12px;
-        }
+th.Quantità {
+    text-align: right;
+    color: #fff;
+    background-color: #00427f;
+    border-color: #00427f;
+    padding: 0px;
+    height: 2.5em;
+    padding-right: 0.5em;
+    border:0px;
+    font-size: 12px;
+}
 
-        td.Descrizione_ct {
-            font-weight: bold;
-            font-size: 115%;
-            background-color: #999 !important;
-            height: 2.5em;
-            padding-left: 0.5em;
-            text-align: left;
-            color: #fff;
-            font-size: 12px;
-        }
-        
-        td.Quantità,
-        td.Prezzo,
-        td.Prezzo_Mese {
-            text-align: right;
-        }
+th.Prezzo {
+    text-align: right;
+    color: #fff;
+    background-color: #00427f;
+    border-color: #00427f;
+    padding-right: 0.5em;
+    height: 2.5em;
+    font-size: 12px;
+}
 
-        td.Quantità_I,
-        td.Prezzo_I,
-        td.Prezzo_Mese_I {
-            text-align: right;
-            color: #666;
-            padding-right: 0.5em;
-            border-bottom: 0.5px solid;
-            height: 3em;
-            font-size: 11px;
-        }
+th.Prezzo_Mese {
+    text-align: right;
+    color: #fff;
+    background-color: #00427f;
+    padding-right: 0.5em;
+    border-color: #00427f;
+    height: 2.5em;
+    font-size: 12px;
+}
 
-        td.Descrizione_I {
-            text-align: left;
-            color: #666;
-            padding-left: 2em;
-            height: 3em;
-            border-bottom: 0.5px solid;
-            font-size: 11px;
-        }
+tr.title {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 110%;
+    background: #f1f1f1;
+    color: #00427f;
+}
 
-        td.Quantità_st,
-        td.Prezzo_st,
-        td.Prezzo_Mese_st {
-            text-align: right;
-            color: #000;
-            padding-right: 0.5em;
-            height: 2.5em;
-            font-weight: bold;
-            font-size: 12px;
-        }
+tr.subtotal {
+    font-weight: bold;
+    font-size: 110%;
+    color: #444;
+}
 
-        td.Descrizione_st {
-            text-align: left;
-            color: #000;
-            padding-left: 0.5em;
-            height: 2.5em;
-            font-weight: bold;
-            font-size: 12px;
-        }
-        
-        tr.detail {
-            color: #666;
-            text-indent: 20px;
-        }
-        
-        tr.grandtotal {
-            background: #079181;
-            color: #fff;
-            font-size: 115%;
-            text-align: right;
-            font-weight: bold;
-            border: none!important;
-        }
+td.Prezzo_Mese_ct,
+td.Quantità_ct,
+td.Prezzo_ct {
+    font-weight: bold;
+    font-size: 115%;
+    background-color: #999 !important;
+    height: 2.5em;
+    padding-right: 0.5em;
+    text-align: right;
+    color: #fff;
+    font-size: 12px;
+}
 
-        tr.grandtotal td {
-            background: #079181;
-            color: #fff;
-            text-align: right;
-            font-weight: bold;
-            height: 1.8em;
-            border: none!important;
-            font-size: 12px;
-            padding-right: 0.5em;
-        }
+td.Descrizione_ct {
+    font-weight: bold;
+    font-size: 115%;
+    background-color: #999 !important;
+    height: 2.5em;
+    padding-left: 0.5em;
+    text-align: left;
+    color: #fff;
+    font-size: 12px;
+}
+
+td.Quantità,
+td.Prezzo,
+td.Prezzo_Mese {
+    text-align: right;
+}
+
+td.Quantità_I,
+td.Prezzo_I,
+td.Prezzo_Mese_I {
+    text-align: right;
+    color: #666;
+    padding-right: 0.5em;
+    border-bottom: 0.5px solid;
+    height: 3em;
+    font-size: 11px;
+}
+
+td.Descrizione_I {
+    text-align: left;
+    color: #666;
+    padding-left: 2em;
+    height: 3em;
+    border-bottom: 0.5px solid;
+    font-size: 11px;
+}
+
+td.Quantità_st,
+td.Prezzo_st,
+td.Prezzo_Mese_st {
+    text-align: right;
+    color: #000;
+    padding-right: 0.5em;
+    height: 2.5em;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+td.Descrizione_st {
+    text-align: left;
+    color: #000;
+    padding-left: 0.5em;
+    height: 2.5em;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+tr.detail {
+    color: #666;
+    text-indent: 20px;
+}
+
+tr.grandtotal {
+    background: #079181;
+    color: #fff;
+    font-size: 115%;
+    text-align: right;
+    font-weight: bold;
+    border: none!important;
+}
+
+tr.grandtotal td {
+    background: #079181;
+    color: #fff;
+    text-align: right;
+    font-weight: bold;
+    height: 1.8em;
+    border: none!important;
+    font-size: 12px;
+    padding-right: 0.5em;
+}
+
+.prev-title {
+  background-color: #079181;
+  color: #fff;
+}
+
+.prev-title2 {
+  color: #00427f;
+  font-size: 1.7em;
+}
+
+.littleimg {
+  width: 30%;
+}
+
+.littleimg2 {
+  width: 20%;
+}
+
+.semititle {
+  font-weight: bold;
+  color: #00427f;
+}
+
+.testo {
+  font-weight: bold;
+  color: #777;
+  font-size: 16px;
+}
+
+.prevright {
+  text-align: right;
+  font-size: 3em;
+}
