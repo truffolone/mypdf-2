@@ -968,5 +968,11 @@ tr.grandtotal td {
 
 .prevright {
   text-align: right;
-  font-size: 3em;
+  font-size: 2em;
+}
+
+.allFooter {
+  text-align: right;
+  background-color: #079181;
+  color: #fff;
 }

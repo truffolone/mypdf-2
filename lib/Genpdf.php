@@ -127,6 +127,16 @@ class Genpdf {
     }
 
     /*
+     * @params (string) $footer;
+     * returns $this;
+     * create footer for each page
+     */
+     public function setFooter(string $footer) {
+         $this->mpdf->setFooter($footer);
+         return $this;
+     }
+
+    /*
      * @params (string) $html;
      * returns $this;
      * binds html data to the protected $this->html
