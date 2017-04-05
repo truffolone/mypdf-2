@@ -263,14 +263,15 @@ $fullTable .= get_sutter_tableB(array("d" => "",
               get_sutter_tableB(array("d" => "",
                                       "q" => "a MQ", 
                                       "p" => $summary->totali->totale_mq . " €",
-                                      "pm" => $summary->totali->totale_mese_mq . " €"));
+                                      "pm" => $summary->totali->totale_mese_mq . " €")) .
+              get_sutter_tableClose();
 
 $pdf->bind("table", $fullTable);
 
 $pdf->replaceAll();
 
 $pdf->generate("prova.pdf", true);
-//print_r($pdf->getTemplate());
+//echo $pdf->getTemplate();
 //$pdf->showDebug();
 
 //$mpdf->WriteHTML($html);
